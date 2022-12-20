@@ -1,0 +1,10 @@
+1.	select count(YEAR(enrolment_date)) ,YEAR(enrolment_date) from students group by YEAR(enrolment_date);
+2.	select count(office_address) , office_address from teachers group by office_address;
+3.	select exams.id, AVG(vote) from exam_student join exams on exams.id=exam_student.exam_id group by exams.id;
+4.	select count(degrees.name) from departments join degrees on departments.id=degrees.department_id group by departments.id;
+
+
+
+
+
+

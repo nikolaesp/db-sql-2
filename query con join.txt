@@ -1,0 +1,24 @@
+1.	select * from students inner join degrees on students.degree_id=degrees.id where degrees.name='Corso di Laurea in Economia';
+2.	select * from departments inner join degrees on departments.id=degrees.department_id 
+inner join courses on degrees.id=courses.degree_id 
+where degrees.level='magistrale' and departments.name='Dipartimento di Neuroscienze';
+3.	select courses.name, teachers.name from teachers inner join course_teacher on teachers.id=course_teacher.teacher_id 
+inner join courses on courses.id=course_teacher.course_id 
+where teacher_id=44;
+4.	select students.name ,students.surname , degrees.name , degrees.level   from students inner join degrees on students.degree_id=degrees.id 
+order by students.name,students.surname ASC;
+5.	select teachers.name , teachers.surname,degrees.name from teachers inner join course_teacher on teachers.id=course_teacher.teacher_id inner join courses on courses.id=course_teacher.course_id 
+inner join degrees on degrees.id=courses.degree_id;
+6.	select teachers.name , teachers.surname ,departments.name from teachers inner join course_teacher on teachers.id=course_teacher.teacher_id inner join courses on courses.id=course_teacher.course_id 
+inner join degrees on degrees.id=courses.degree_id inner join departments on departments.id=degrees.department_id
+where departments.name='Dipartimento di Matematica';
+7.	select * from students inner join exam_student  on student_id=exam_student.student_id inner join exams on exam_student.exam_id=exams.id;
+
+
+
+
+
+
+
+
+
